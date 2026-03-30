@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="GuestReport" pageWidth="842" pageHeight="595" columnWidth="782" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="8a33de00-dd25-4242-bf1d-7fde8cb985e6">
+	<parameter name="ReportTitle" class="java.lang.String"/>
+	<parameter name="ReportDate" class="java.util.Date"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="Date" class="java.lang.String"/>
+	<field name="Guest ID" class="java.lang.String"/>
+	<field name="First Name" class="java.lang.String"/>
+	<field name="Last Name" class="java.lang.String"/>
+	<field name="Email" class="java.lang.String"/>
+	<field name="Resident status" class="java.lang.String"/>
+	<field name="Contact" class="java.lang.String"/>
+	<field name="Country" class="java.lang.String"/>
+	<title>
+		<band height="50">
+			<textField>
+				<reportElement mode="Opaque" x="640" y="35" width="142" height="15" backcolor="#FFFFFF" uuid="dea19772-fe70-4912-a420-422920b11eb0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date: " + new java.text.SimpleDateFormat("yyyy-MM-dd").format($P{ReportDate})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="270" y="0" width="221" height="31" backcolor="#FFFFFF" uuid="83e940c5-9ba1-47d1-b13f-8ff01544ae9c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GUEST LIST REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="80" height="20" forecolor="#0D0B0B" backcolor="#93C2AE" uuid="330613c1-f049-4047-baeb-8885fdebc984"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="80" y="0" width="90" height="20" forecolor="#0D0B0B" backcolor="#93C2AE" uuid="921ef42c-cbc2-4351-9389-5c7f0f1809dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Guest ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="170" y="0" width="100" height="20" forecolor="#0D0B0B" backcolor="#93C2AE" uuid="28539b62-b055-483d-81d6-2f965e3fc3ae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[First Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="270" y="0" width="100" height="20" forecolor="#0D0B0B" backcolor="#93C2AE" uuid="e63b62b4-f3f1-41ed-9d7e-966b77846feb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="370" y="0" width="140" height="20" forecolor="#0D0B0B" backcolor="#93C2AE" uuid="821911c3-2df5-49bd-b919-08c43e28b876"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="510" y="0" width="90" height="20" forecolor="#0D0B0B" backcolor="#93C2AE" uuid="1f6b2914-8443-4d2d-95ab-15453c215765"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resident Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="600" y="0" width="90" height="20" forecolor="#0D0B0B" backcolor="#93C2AE" uuid="a9c531b3-4b6e-4f97-a1c4-0fbd9126ab16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="690" y="0" width="92" height="20" forecolor="#0D0B0B" backcolor="#93C2AE" uuid="04a01841-0816-43a8-8192-152851dd74dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Country]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<textField>
+				<reportElement mode="Transparent" x="0" y="0" width="80" height="20" backcolor="#FFFFFF" uuid="199093b9-02d3-4fa3-9763-0992fb397047"/>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="80" y="0" width="90" height="20" backcolor="#FFFFFF" uuid="70918072-1316-4eaf-8055-0c5f0eb5c939"/>
+				<textFieldExpression><![CDATA[$F{Guest ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="170" y="0" width="100" height="20" backcolor="#FFFFFF" uuid="bc092997-0864-4c02-9a70-840d8fb06a31"/>
+				<textFieldExpression><![CDATA[$F{First Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="270" y="0" width="100" height="20" backcolor="#FFFFFF" uuid="6143b776-947b-4861-b1a7-8c322cc01d68"/>
+				<textFieldExpression><![CDATA[$F{Last Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="370" y="0" width="140" height="20" backcolor="#FFFFFF" uuid="8ce21ea7-ad9a-43de-8656-71558d7c58d7"/>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="510" y="0" width="90" height="20" backcolor="#FFFFFF" uuid="7e461946-8fe7-4126-9c62-dc8653636f6a"/>
+				<textFieldExpression><![CDATA[$F{Resident status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="600" y="0" width="90" height="20" backcolor="#FFFFFF" uuid="ac0c9692-d197-4569-9b6d-7f671d72c6a6"/>
+				<textFieldExpression><![CDATA[$F{Contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="690" y="0" width="92" height="20" backcolor="#FFFFFF" uuid="8ae39c97-6c05-4ff0-869e-b2e67d109052"/>
+				<textFieldExpression><![CDATA[$F{Country}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="feedback_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="12345678-1234-1234-1234-123456789abc">
+	<field name="Feedback Id" class="java.lang.String"/>
+	<field name="Guest Id" class="java.lang.String"/>
+	<field name="Reserve Id" class="java.lang.String"/>
+	<field name="Comments" class="java.lang.String"/>
+	<field name="Ratings" class="java.lang.Integer"/>
+	<title>
+		<band height="50">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="30" uuid="efd5230f-9099-4ca4-9393-cf1abfc18553"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Guest Feedback Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="25">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="100" height="20" backcolor="#93C2AE" uuid="7d8734ee-0901-4e0b-927e-7db1b28593c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Feedback Id"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="100" y="0" width="80" height="20" backcolor="#93C2AE" uuid="fbe2c2b3-9f76-4e32-b031-8fa477baa84b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Guest Id"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="180" y="0" width="80" height="20" backcolor="#93C2AE" uuid="078b6642-04bb-4e85-a434-46f905fc1d6c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Reserve Id"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="260" y="0" width="80" height="20" backcolor="#93C2AE" uuid="74fc3b75-6327-4c52-9688-300a918033d2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Ratings"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="340" y="0" width="215" height="20" backcolor="#93C2AE" uuid="3fdd60d5-7f94-4f89-a498-c1281f2504c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Comments"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="83869a5c-a83d-49c1-af18-282745f27df8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Feedback Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="80" height="20" uuid="316ca1a8-761b-4798-bb55-5b17a9988565"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Guest Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="80" height="20" uuid="93b2a256-92b2-4f4d-a9bd-dcf90d10e5bb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Reserve Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="0" width="80" height="20" uuid="42f51ab2-58f9-4346-a88f-a64862630ea2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Ratings}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="215" height="20" uuid="af1dbac7-f646-4690-9a03-177c4cc3b1a5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Comments}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
